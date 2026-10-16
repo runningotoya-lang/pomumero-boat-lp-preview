@@ -42,12 +42,42 @@
     .proof-grid img{display:block;width:100%;height:auto;border:1px solid #eab7cd;border-radius:7px;box-shadow:0 4px 12px #9e34591a;scroll-snap-align:start}
     .proof-note{margin:13px 4px 0;color:#81727a;text-align:center;font-size:9px;line-height:1.65}
     .cta{padding-bottom:34px;background:#fff}
+    .gift-cta{position:relative;overflow:hidden;padding:34px 14px 38px;background:radial-gradient(circle at 50% 31%,#fff 0 18%,#fff3f8 48%,#ffd6e8 100%);text-align:center;border-top:8px solid #e83f7f}
+    .gift-cta:before,.gift-cta:after{content:"";position:absolute;border-radius:50%;background:#fff8;filter:blur(1px)}
+    .gift-cta:before{width:180px;height:180px;left:-95px;top:72px}.gift-cta:after{width:130px;height:130px;right:-68px;top:210px}
+    .gift-kicker{position:relative;z-index:2;display:inline-block;margin:0 0 11px;padding:7px 18px;border-radius:999px;background:#191217;color:#fff;font-size:clamp(13px,3.8vw,17px);font-weight:950;letter-spacing:.04em}
+    .gift-title{position:relative;z-index:2;margin:0;color:#20161d;font-size:clamp(24px,7.2vw,37px);line-height:1.32;font-weight:1000;letter-spacing:-.04em}
+    .gift-title strong{color:#e83f7f}
+    .gift-lead{position:relative;z-index:2;margin:11px 0 0;color:#6f4b5e;font-size:clamp(14px,4vw,18px);line-height:1.65;font-weight:850}
+    .mockup-stage{position:relative;z-index:1;height:clamp(390px,104vw,560px);max-height:560px;margin:10px auto -4px;perspective:1000px}
+    .mock-page{position:absolute;top:76px;width:45%;aspect-ratio:900/1260;overflow:hidden;border:5px solid #fff;border-radius:8px;background:#fff;box-shadow:0 18px 30px #57152d45}
+    .mock-page img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+    .mock-page.left{left:3%;transform:rotate(-9deg) rotateY(17deg)}
+    .mock-page.right{right:3%;transform:rotate(9deg) rotateY(-17deg)}
+    .mock-book{position:absolute;z-index:3;left:50%;top:34px;width:58%;aspect-ratio:9/12.6;transform:translateX(-50%) rotate(-1.5deg);border:5px solid #fff;border-left:13px solid #b92969;border-radius:7px 11px 11px 7px;background:#e83f7f;box-shadow:0 25px 40px #57152d65,9px 8px 0 #f9c7db,14px 13px 0 #fff}
+    .mock-cover-image{position:absolute;inset:0;overflow:hidden;border-radius:2px 7px 7px 2px}
+    .mock-cover-image img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:saturate(.92) brightness(.72)}
+    .mock-cover-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#25051622 0%,#8d124d33 37%,#250516e6 100%)}
+    .mock-cover-copy{position:absolute;z-index:2;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:15px 12px 17px;color:#fff;text-align:left;text-shadow:0 2px 4px #000}
+    .mock-cover-label{align-self:flex-start;padding:5px 9px;border-radius:4px;background:#fff;color:#d62972;font-size:clamp(9px,2.4vw,12px);font-weight:1000;text-shadow:none}
+    .mock-cover-bottom small{display:block;margin-bottom:5px;color:#ffcfe2;font-size:clamp(10px,2.8vw,13px);font-weight:900}
+    .mock-cover-bottom b{display:block;font-size:clamp(21px,6vw,34px);line-height:1.12;font-weight:1000;letter-spacing:-.05em}
+    .mock-cover-bottom span{display:block;margin-top:8px;padding-top:8px;border-top:1px solid #fff8;font-size:clamp(9px,2.5vw,12px);line-height:1.45;font-weight:850}
+    .free-seal{position:absolute;z-index:5;right:4%;top:4px;display:grid;place-items:center;width:clamp(78px,22vw,112px);aspect-ratio:1;border:5px solid #fff;border-radius:50%;background:#ffcf32;color:#20161d;box-shadow:0 8px 0 #d59a00,0 14px 25px #792b4933;font-size:clamp(24px,7vw,37px);line-height:1;font-weight:1000;transform:rotate(8deg)}
+    .free-seal small{display:block;font-size:.36em;line-height:1.15;letter-spacing:.08em}
+    .gift-details{position:relative;z-index:3;width:min(100%,520px);margin:0 auto 15px;padding:15px 13px;border:2px solid #efb4cd;border-radius:12px;background:#fffbfd;color:#3b2731;text-align:left;box-shadow:0 8px 18px #8d315014}
+    .gift-details p{margin:0 0 7px;text-align:center;color:#d72d72;font-size:clamp(14px,4vw,18px);font-weight:1000}
+    .gift-details ul{display:grid;grid-template-columns:1fr 1fr;gap:7px 10px;margin:0;padding:0;list-style:none;font-size:clamp(12px,3.6vw,15px);line-height:1.45;font-weight:850}
+    .gift-details li:before{content:"✓";display:inline-grid;place-items:center;width:19px;height:19px;margin-right:5px;border-radius:50%;background:#e83f7f;color:#fff;font-size:12px;font-weight:1000}
+    .gift-cta .line-btn{position:relative;z-index:3;margin-top:14px;animation:giftPulse 1.8s ease-in-out infinite}
+    .gift-note{position:relative;z-index:3;margin:17px 0 0;color:#8b6a79;font-size:10px;line-height:1.7}
+    @keyframes giftPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
     .inline-cta{padding:12px 0 30px;background:#fff8fb;border-top:1px solid #f2d5e1;border-bottom:1px solid #f2d5e1}
     .inline-cta p{margin:0;text-align:center;color:#9c5776;font-size:12px;font-weight:900}
     .line-btn{display:block;width:calc(100% - 32px);margin:20px auto 0;padding:18px 12px 16px;border-radius:14px;background:linear-gradient(#12ca65,#06a94f);box-shadow:0 8px 0 #087a3d,0 15px 28px #08aa5338;color:#fff;text-align:center;text-decoration:none;font-size:clamp(20px,5.7vw,28px);line-height:1.35;font-weight:1000;text-shadow:0 2px #08713a}
     .line-btn span{display:block;margin-top:3px;font-size:11px;font-weight:800}
     .legal{margin:18px 18px 0;color:#80717a;text-align:center;font-size:10px;line-height:1.65}
-    @media(max-width:430px){.authority{padding:18px 10px 23px}.authority-grid{gap:7px}.proof{padding-left:8px;padding-right:8px}.proof-guide{display:block}.proof-grid{grid-auto-columns:52%;gap:8px}.proof-note{font-size:8px}.cta{padding-bottom:24px}.line-btn{margin-top:15px;padding:14px 8px 12px}.legal{font-size:8px;margin-top:14px}}
+    @media(max-width:430px){.authority{padding:18px 10px 23px}.authority-grid{gap:7px}.proof{padding-left:8px;padding-right:8px}.proof-guide{display:block}.proof-grid{grid-auto-columns:52%;gap:8px}.proof-note{font-size:8px}.cta{padding-bottom:24px}.line-btn{margin-top:15px;padding:14px 8px 12px}.legal{font-size:8px;margin-top:14px}.gift-cta{padding-left:10px;padding-right:10px}.mock-page{top:68px}.gift-details{padding:13px 9px}.gift-details ul{gap:7px 5px}}
   </style>
 </head>
 <body>
@@ -101,9 +131,36 @@
       </div>
     </section>
 
-    <section class="page cta" aria-label="4ページ目 LINE登録">
-      <a class="line-btn" href="https://utage-system.com/page/eb2nzAX5Tx6f">LINE登録して無料で続きを見る<span>追加は無料／あとからブロックOK</span></a>
-      <p class="legal">20歳未満の方は利用できません。結果や利益を保証するものではありません。無理のない範囲で楽しんでください。</p>
+    <section class="page gift-cta" aria-label="4ページ目 無料漫画プレゼントとLINE登録">
+      <p class="gift-kicker">LINE登録者限定</p>
+      <h2 class="gift-title">私がどう始めて、<br>ここまで来たのか。<br><strong>続きは漫画で無料配布中</strong></h2>
+      <p class="gift-lead">LINEを追加すると、<br>ぽむめろの漫画をそのまま読めます。</p>
+
+      <div class="mockup-stage" aria-label="LINE登録で無料で読めるぽむめろ漫画のモックアップ">
+        <div class="mock-page left"><img src="assets/dialogue_02_secret_cheat_v2.png" alt="漫画の中身の見本"></div>
+        <div class="mock-page right"><img src="assets/dialogue_05_registration_reaction_v2.png" alt="漫画の中身の見本"></div>
+        <div class="mock-book">
+          <div class="mock-cover-image"><img src="assets/lifestyle_intro_hostclub_v2.png" alt=""></div>
+          <div class="mock-cover-copy">
+            <span class="mock-cover-label">ぽむめろ公式漫画</span>
+            <div class="mock-cover-bottom"><small>労働に頼らない生活へ</small><b>私が競艇を<br>始めた理由</b><span>初心者でも分かるように、始め方からまとめました。</span></div>
+          </div>
+        </div>
+        <div class="free-seal"><div><small>LINE登録で</small>無料</div></div>
+      </div>
+
+      <div class="gift-details">
+        <p>漫画の中で、ここまで見せます</p>
+        <ul>
+          <li>私が競艇を始めた理由</li>
+          <li>予想の「答え」の見方</li>
+          <li>買い目の使い方</li>
+          <li>スマホでの始め方</li>
+        </ul>
+      </div>
+
+      <a class="line-btn" href="https://utage-system.com/page/eb2nzAX5Tx6f">LINE登録して無料で漫画を読む<span>追加は無料／あとからブロックOK</span></a>
+      <p class="gift-note">20歳未満の方は利用できません。結果や利益を保証するものではありません。<br>無理のない範囲で楽しんでください。</p>
     </section>
   </main>
 </body>
