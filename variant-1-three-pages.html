@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>比較案1｜実際の漫画を3枚チラ見せ</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;background:#181116;color:#171217;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif}
+    main{width:min(100%,660px);margin:0 auto;background:#fff;box-shadow:0 0 70px #000b}
+    .page{background:#fff;border-bottom:10px solid #f7edf2}
+    .pm-ban-banner{width:100%;background:#c62828;color:#fff;text-align:center;padding:clamp(10px,3vw,14px) 12px;font-weight:950;font-size:clamp(14px,4.4vw,21px);line-height:1.4;letter-spacing:.3px}
+    .pm-fv-photo{display:block;width:100%;height:auto}
+    .pm-hero{padding:26px 16px 30px;text-align:center;background:#fff;color:#151515}
+    .pm-hero-title{margin:0;font-weight:900;font-size:clamp(17px,5.3vw,23px);line-height:1.55;letter-spacing:0}
+    .pm-tag-solo{display:inline-block;margin-top:18px;padding:12px 30px;background:#e64d93;color:#fff;border-radius:999px;font-weight:950;font-size:clamp(18px,5.8vw,27px);letter-spacing:.5px;box-shadow:0 6px 0 rgba(166,40,102,.35)}
+    .story-image,.cta-image{display:block;width:100%;height:auto}
+    .authority{padding:22px 16px 28px;background:#fff8fb}
+    .authority-label{margin:0 0 15px;text-align:center;color:#2b1d24;font-size:clamp(16px,4.5vw,22px);line-height:1.45;font-weight:950}
+    .authority-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .authority-card{margin:0;background:#fff;border:1px solid #efcada;border-radius:10px;overflow:hidden;box-shadow:0 5px 14px #8d315014}
+    .authority-card img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}
+    .authority-card:first-child img{object-position:center}
+    .authority-card:last-child img{object-position:top}
+    .method-intro{padding:31px 20px 26px;text-align:center;background:#e83f7f;color:#fff}
+    .method-intro p{margin:0 0 8px;color:#fff;font-size:clamp(13px,3.7vw,16px);font-weight:900}
+    .method-intro h2{margin:0;color:#fff;font-size:clamp(25px,7.5vw,38px);line-height:1.35;font-weight:950;letter-spacing:-.03em}
+    .method-intro h2 em{color:#fff4a5;font-style:normal}
+    .method-rule{display:inline-flex;align-items:center;gap:9px;margin-top:19px;padding:11px 15px;border:2px solid #fff;border-radius:999px;background:#fff;color:#352630;font-size:clamp(12px,3.7vw,16px);font-weight:950;box-shadow:0 4px 0 #b6275d}
+    .method-rule b{color:#e43e82;font-size:1.15em}
+    .method-crop{aspect-ratio:900/1260;overflow:hidden;background:#fff}
+    .method-crop img{display:block;width:100%;height:auto}
+    .new-manga-series{position:relative;background:#fff}
+    .new-manga-series>img{display:block;width:100%;height:auto}
+    .manga-top-half{position:relative;aspect-ratio:941/836;overflow:hidden;background:#fff}
+    .manga-top-half img{display:block;width:100%;height:auto}
+    .proof{padding:27px 14px 30px;background:#fff8fb}
+    .proof-title{margin:0 0 15px;text-align:center;color:#262026;font-size:clamp(16px,4.8vw,22px);line-height:1.5;font-weight:950}
+    .proof-guide{display:none;margin:-7px 0 11px;text-align:center;color:#a45f7e;font-size:10px;font-weight:800}
+    .proof-grid{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(120px,1fr);gap:7px;align-items:start;overflow-x:auto;padding:2px 2px 10px;scroll-snap-type:x mandatory;scrollbar-width:none}
+    .proof-grid::-webkit-scrollbar{display:none}
+    .proof-grid img{display:block;width:100%;height:auto;border:1px solid #eab7cd;border-radius:7px;box-shadow:0 4px 12px #9e34591a;scroll-snap-align:start}
+    .proof-note{margin:13px 4px 0;color:#81727a;text-align:center;font-size:9px;line-height:1.65}
+    .cta{padding-bottom:34px;background:#fff}
+    .gift-cta{position:relative;overflow:hidden;padding:34px 14px 38px;background:radial-gradient(circle at 50% 31%,#fff 0 18%,#fff3f8 48%,#ffd6e8 100%);text-align:center;border-top:8px solid #e83f7f}
+    .gift-cta:before,.gift-cta:after{content:"";position:absolute;border-radius:50%;background:#fff8;filter:blur(1px)}
+    .gift-cta:before{width:180px;height:180px;left:-95px;top:72px}.gift-cta:after{width:130px;height:130px;right:-68px;top:210px}
+    .gift-kicker{position:relative;z-index:2;display:inline-block;margin:0 0 11px;padding:7px 18px;border-radius:999px;background:#191217;color:#fff;font-size:clamp(13px,3.8vw,17px);font-weight:950;letter-spacing:.04em}
+    .gift-title{position:relative;z-index:2;margin:0;color:#20161d;font-size:clamp(24px,7.2vw,37px);line-height:1.32;font-weight:1000;letter-spacing:-.04em}
+    .gift-title strong{color:#e83f7f}
+    .gift-lead{position:relative;z-index:2;margin:11px 0 0;color:#6f4b5e;font-size:clamp(14px,4vw,18px);line-height:1.65;font-weight:850}
+    .mockup-stage{position:relative;z-index:1;height:clamp(390px,104vw,560px);max-height:560px;margin:10px auto -4px;perspective:1000px}
+    .mock-page{position:absolute;top:76px;width:45%;aspect-ratio:900/1260;overflow:hidden;border:5px solid #fff;border-radius:8px;background:#fff;box-shadow:0 18px 30px #57152d45}
+    .mock-page img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+    .mock-page.left{left:3%;transform:rotate(-9deg) rotateY(17deg)}
+    .mock-page.right{right:3%;transform:rotate(9deg) rotateY(-17deg)}
+    .mock-book{position:absolute;z-index:3;left:50%;top:34px;width:58%;aspect-ratio:9/12.6;transform:translateX(-50%) rotate(-1.5deg);border:5px solid #fff;border-left:13px solid #b92969;border-radius:7px 11px 11px 7px;background:#e83f7f;box-shadow:0 25px 40px #57152d65,9px 8px 0 #f9c7db,14px 13px 0 #fff}
+    .mock-book.page-preview{overflow:hidden;border-left:5px solid #fff;background:#fff}
+    .mock-book.page-preview img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+    .mock-cover-image{position:absolute;inset:0;overflow:hidden;border-radius:2px 7px 7px 2px}
+    .mock-cover-image img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:saturate(.92) brightness(.72)}
+    .mock-cover-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#25051622 0%,#8d124d33 37%,#250516e6 100%)}
+    .mock-cover-copy{position:absolute;z-index:2;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:15px 12px 17px;color:#fff;text-align:left;text-shadow:0 2px 4px #000}
+    .mock-cover-label{align-self:flex-start;padding:5px 9px;border-radius:4px;background:#fff;color:#d62972;font-size:clamp(9px,2.4vw,12px);font-weight:1000;text-shadow:none}
+    .mock-cover-bottom small{display:block;margin-bottom:5px;color:#ffcfe2;font-size:clamp(10px,2.8vw,13px);font-weight:900}
+    .mock-cover-bottom b{display:block;font-size:clamp(18px,5.2vw,31px);line-height:1.08;font-weight:1000;letter-spacing:-.05em}
+    .mock-cover-bottom span{display:block;margin-top:8px;padding-top:8px;border-top:1px solid #fff8;font-size:clamp(9px,2.5vw,12px);line-height:1.45;font-weight:850}
+    .free-seal{position:absolute;z-index:5;right:4%;top:4px;display:grid;place-items:center;width:clamp(78px,22vw,112px);aspect-ratio:1;border:5px solid #fff;border-radius:50%;background:#ffcf32;color:#20161d;box-shadow:0 8px 0 #d59a00,0 14px 25px #792b4933;font-size:clamp(24px,7vw,37px);line-height:1;font-weight:1000;transform:rotate(8deg)}
+    .free-seal small{display:block;font-size:.36em;line-height:1.15;letter-spacing:.08em}
+    .gift-details{position:relative;z-index:3;width:min(100%,520px);margin:0 auto 15px;padding:15px 13px;border:2px solid #efb4cd;border-radius:12px;background:#fffbfd;color:#3b2731;text-align:left;box-shadow:0 8px 18px #8d315014}
+    .gift-details p{margin:0 0 7px;text-align:center;color:#d72d72;font-size:clamp(14px,4vw,18px);font-weight:1000}
+    .gift-details ul{display:grid;grid-template-columns:1fr 1fr;gap:7px 10px;margin:0;padding:0;list-style:none;font-size:clamp(12px,3.6vw,15px);line-height:1.45;font-weight:850}
+    .gift-details li:before{content:"✓";display:inline-grid;place-items:center;width:19px;height:19px;margin-right:5px;border-radius:50%;background:#e83f7f;color:#fff;font-size:12px;font-weight:1000}
+    .gift-cta .line-btn{position:relative;z-index:3;margin-top:14px;animation:giftPulse 1.8s ease-in-out infinite}
+    .gift-note{position:relative;z-index:3;margin:17px 0 0;color:#8b6a79;font-size:10px;line-height:1.7}
+    @keyframes giftPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+    .inline-cta{padding:12px 0 30px;background:#fff8fb;border-top:1px solid #f2d5e1;border-bottom:1px solid #f2d5e1}
+    .inline-cta p{margin:0;text-align:center;color:#9c5776;font-size:12px;font-weight:900}
+    .line-btn{display:block;width:calc(100% - 32px);margin:20px auto 0;padding:18px 12px 16px;border-radius:14px;background:linear-gradient(#12ca65,#06a94f);box-shadow:0 8px 0 #087a3d,0 15px 28px #08aa5338;color:#fff;text-align:center;text-decoration:none;font-size:clamp(20px,5.7vw,28px);line-height:1.35;font-weight:1000;text-shadow:0 2px #08713a}
+    .line-btn span{display:block;margin-top:3px;font-size:11px;font-weight:800}
+    .legal{margin:18px 18px 0;color:#80717a;text-align:center;font-size:10px;line-height:1.65}
+    @media(max-width:430px){.authority{padding:18px 10px 23px}.authority-grid{gap:7px}.proof{padding-left:8px;padding-right:8px}.proof-guide{display:block}.proof-grid{grid-auto-columns:52%;gap:8px}.proof-note{font-size:8px}.cta{padding-bottom:24px}.line-btn{margin-top:15px;padding:14px 8px 12px}.legal{font-size:8px;margin-top:14px}.gift-cta{padding-left:10px;padding-right:10px}.mock-page{top:68px}.gift-details{padding:13px 12px}.gift-details ul{grid-template-columns:1fr;gap:7px}}
+  </style>
+</head>
+<body>
+  <main>
+    <section class="page" aria-label="1ページ目 ファーストビュー">
+      <div class="pm-ban-banner">⚠️BAN覚悟で「期間限定」公開⚠️</div>
+      <img class="pm-fv-photo" src="https://utagesystem.s3.ap-northeast-1.wasabisys.com/dfXggjzx8aFv/4qm6TNDWR1Cx.jpg" alt="">
+      <div class="pm-hero">
+        <h1 class="pm-hero-title">【労働キャンセル界隈】<br>おぢから完全解放！<br>夜職卒業して「ニートになって」<br>月収1,000万超えた話。</h1>
+        <div class="pm-tag-solo">全て漫画で解説</div>
+      </div>
+    </section>
+
+    <section class="page" aria-label="2ページ目 夜職を辞めて時間と収入が増えた生活">
+      <img class="story-image" src="assets/lifestyle_intro_hostclub_v2.png" alt="最近の暮らしとして、趣味のホストクラブで高級シャンパンを開け、ブランド品を値段を見ずに買い、夜職を辞めても収入が増えた生活を描く新規漫画">
+      <div class="authority">
+        <p class="authority-label">実際に走らせたアドトラと、<br>掲載された新聞がこれ。</p>
+        <div class="authority-grid">
+          <figure class="authority-card"><img src="https://utagesystem.s3.ap-northeast-1.wasabisys.com/dfXggjzx8aFv/REGBBmxNM2RV.webp" alt="実際に走行したアドトラック"></figure>
+          <figure class="authority-card"><img src="https://utagesystem.s3.ap-northeast-1.wasabisys.com/dfXggjzx8aFv/gy2u84iF73z5.webp" alt="アドトラックの新聞掲載実績"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" aria-label="3ページ目 勝てる理由と的中実績">
+      <div class="new-manga-series" aria-label="競艇の裏ワザを会話で解き明かす新規漫画">
+        <img src="assets/dialogue_01_competition_reveal.png" alt="答えは競艇だと明かし、読者のギャンブルへの疑問を先回りする漫画">
+      </div>
+      <div class="proof">
+        <h3 class="proof-title">でも、実際の的中画面はこんな感じ。<br>ちゃんと勝ってたりする。</h3>
+        <p class="proof-guide">← 横に送ると4枚見られます →</p>
+        <div class="proof-grid">
+          <img src="assets/hit_01.png" alt="競艇の的中画面1">
+          <img src="assets/hit_02.png" alt="競艇の的中画面2">
+          <img src="assets/hit_03.png" alt="競艇の的中画面3">
+          <img src="assets/hit_04.png" alt="競艇の的中画面4">
+        </div>
+        <p class="proof-note">※的中実績の一例です。同じ結果や利益を保証するものではありません。</p>
+      </div>
+      <div class="new-manga-series">
+        <img src="assets/dialogue_02_secret_cheat_v2.png" alt="競艇には裏ワザがあり、答えをカンニングするという話を短い会話で伝える漫画">
+        <div class="manga-top-half"><img src="assets/dialogue_03_where_prediction_v2.png" alt="レースごとに買う番号が答えとして出て、その番号をそのまま買うだけだと説明する漫画"></div>
+        <img src="assets/dialogue_03_core_secret_line_v4.png" alt="左右交互の吹き出しで、答えを見る場所は裏ワザの一番の肝なので一般公開せず、今だけLINE登録者に送ると伝える漫画">
+      </div>
+      <div class="inline-cta">
+        <p>ここから先を今すぐ見るなら</p>
+        <a class="line-btn" href="https://utage-system.com/page/eb2nzAX5Tx6f">LINE登録して無料で続きを見る<span>追加は無料／あとからブロックOK</span></a>
+      </div>
+      <div class="new-manga-series">
+        <img src="assets/dialogue_05_registration_reaction_v2.png" alt="第三者がLINE登録後の漫画を見て、ここまで教えてくれるのかと驚き、公開の限定性を伝える漫画">
+      </div>
+    </section>
+
+    <section id="gift-cta" class="page gift-cta" aria-label="比較案1 実際の限定漫画を3枚チラ見せ">
+      <p class="gift-kicker">LINE登録者限定</p>
+      <h2 class="gift-title">夜職を辞めた私が、<br>競艇で月収1,000万円を<br>超えるまで<br><strong>続きは漫画で無料配布中</strong></h2>
+      <p class="gift-lead">LINEを追加すると、<br>このページで話した続きの漫画をそのまま読めます。</p>
+
+      <div class="mockup-stage" aria-label="LINE登録後に読める限定漫画の実際の3ページをチラ見せ">
+        <div class="mock-page left"><img src="assets/limited_manga_search.png" alt="勝っている人を自分で調べ始める限定漫画の実際のページ"></div>
+        <div class="mock-page right"><img src="assets/limited_manga_pro_analysis.png" alt="予想のプロが波やボートの相性まで見ていると知る限定漫画の実際のページ"></div>
+        <div class="mock-book page-preview"><img src="assets/limited_manga_discovery.png" alt="予想サイトの存在を初めて知る限定漫画の実際のページ"></div>
+        <div class="free-seal"><div><small>LINE登録で</small>無料</div></div>
+      </div>
+
+      <div class="gift-details">
+        <p>漫画の中で、ここまで見せます</p>
+        <ul>
+          <li>夜職を辞めて生活が変わった話</li>
+          <li>私が使っている競艇の考え方</li>
+          <li>買い目の「答え」を見る方法</li>
+          <li>LINE登録後に読める漫画の続き</li>
+        </ul>
+      </div>
+
+      <a class="line-btn" href="https://utage-system.com/page/eb2nzAX5Tx6f">LINE登録して無料で漫画を読む<span>追加は無料／あとからブロックOK</span></a>
+      <p class="gift-note">20歳未満の方は利用できません。結果や利益を保証するものではありません。<br>無理のない範囲で楽しんでください。</p>
+    </section>
+  </main>
+</body>
+</html>
